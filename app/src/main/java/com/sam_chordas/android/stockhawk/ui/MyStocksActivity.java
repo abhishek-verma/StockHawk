@@ -9,7 +9,6 @@ import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -44,10 +43,10 @@ public class MyStocksActivity extends AppCompatActivity implements LoaderManager
 
     private static final int CURSOR_LOADER_ID = 0;
     private boolean isConnected;
-    /**
-     * Used to store the last screen title. For use in {@link #restoreActionBar()}.
-     */
-    private CharSequence mTitle;
+    //    /**
+//     * Used to store the last screen title. For use in {@link #restoreActionBar()}.
+//     */
+//    private CharSequence mTitle;
     private Intent mServiceIntent;
     private ItemTouchHelper mItemTouchHelper;
     private QuoteCursorAdapter mCursorAdapter;
@@ -127,7 +126,7 @@ public class MyStocksActivity extends AppCompatActivity implements LoaderManager
                                             new String[]{input.toString()}, null);
                                     if (c.getCount() != 0) {
                                         Toast toast =
-                                                Toast.makeText(MyStocksActivity.this, "This stock is already saved!",
+                                                Toast.makeText(MyStocksActivity.this, R.string.stock_exists_msg,
                                                         Toast.LENGTH_LONG);
                                         toast.setGravity(Gravity.CENTER, Gravity.CENTER, 0);
                                         toast.show();
@@ -151,7 +150,7 @@ public class MyStocksActivity extends AppCompatActivity implements LoaderManager
         mItemTouchHelper = new ItemTouchHelper(callback);
         mItemTouchHelper.attachToRecyclerView(recyclerView);
 
-        mTitle = getTitle();
+//        mTitle = getTitle();
         if (isConnected) {
             long period = 3600L;
             long flex = 10L;
@@ -194,17 +193,17 @@ public class MyStocksActivity extends AppCompatActivity implements LoaderManager
         Toast.makeText(mContext, getString(R.string.network_toast), Toast.LENGTH_SHORT).show();
     }
 
-    private void restoreActionBar() {
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
-        actionBar.setDisplayShowTitleEnabled(true);
-        actionBar.setTitle(mTitle);
-    }
+//    private void restoreActionBar() {
+//        ActionBar actionBar = getSupportActionBar();
+//        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
+//        actionBar.setDisplayShowTitleEnabled(true);
+//        actionBar.setTitle(mTitle);
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.my_stocks, menu);
-        restoreActionBar();
+//        restoreActionBar();
         return true;
     }
 

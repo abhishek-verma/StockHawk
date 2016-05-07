@@ -20,6 +20,7 @@
     <string name="isUp" translatable="false">is_up</string>
     <string name="percent_change" translatable="false">percent_change</string>
     <string name="tag" translatable="false">tag</string>
+    <string name="title_activity_detail_activty" translatable="false">DetailActivty</string>
 
     <!--Messages-->
 
@@ -27,5 +28,5 @@
     <string name="noInternetConnection">This app requires an internet connection</string>
     <string name="addSymbolSuccess">Symbol Added</string>
     <string name="addSymbolFailure">Invalid Symbol!</string>
-    <string name="title_activity_detail_activty" translatable="false">DetailActivty</string>
+    <string name="stock_exists_msg">This stock is already saved!</string>
 </resources>
