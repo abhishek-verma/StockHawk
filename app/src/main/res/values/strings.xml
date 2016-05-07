@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Stock Hawk</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_change_units">Change Units</string>
+    <string name="symbol_search">Symbol Search</string>
+    <string name="content_test">Search for a Stock Symbol</string>
+    <string name="input_hint">FB</string>
+    <string name="input_prefill" translatable="false"></string>
+    <string name="widget_title">Today\'s Market</string>
+    <string name="title_activity_stock_detail">Stock Detail</string>
+    <string name="symbol" translatable="false">symbol</string>
+    <string name="string_set_background_resource" translatable="false">setBackgroundResource</string>
+    <string name="add_widget">Add widget</string>
+    <string name="floatingActionButtonDescription">Add Stock</string>
+    <string name="price" translatable="false">bid_price</string>
+    <string name="change" translatable="false">change</string>
+    <string name="isUp" translatable="false">is_up</string>
+    <string name="percent_change" translatable="false">percent_change</string>
+    <string name="tag" translatable="false">tag</string>
+
+    <!--Messages-->
+
+    <string name="network_toast">Uh-oh! This app requires an internet connection</string>
+    <string name="noInternetConnection">This app requires an internet connection</string>
+    <string name="addSymbolSuccess">Symbol Added</string>
+    <string name="addSymbolFailure">Invalid Symbol!</string>
+    <string name="title_activity_detail_activty" translatable="false">DetailActivty</string>
+</resources>
